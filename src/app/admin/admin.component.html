@@ -1,0 +1,35 @@
+<form [formGroup]="albumForm" (ngSubmit)="onSubmit()">
+  <h5>Album Details</h5>
+  <div>
+    <label>Title</label>
+    <input type="text" placeholder="" formControlName="title">
+  </div>
+  <div>
+    <label>Artist</label>
+    <input type="text" placeholder="" formControlName="artist">
+  </div>
+  <div>
+    <label>Date</label>
+    <input type="date" placeholder="" formControlName="date">
+  </div>
+  <div>
+    <label>Image URL</label>
+    <input type="text" placeholder="" formControlName="imageURL">
+  </div>
+  <hr>
+  <h2>Songs</h2>
+  <div>
+    <label>Song</label>
+    <input type="text" placeholder="">
+  </div>
+  <div>
+    <label>Duration</label>
+    <input type="text" placeholder="">
+  </div>
+  <button class="addsongbtn" type="button">Add song</button>
+  <!--<button class="removegbtn" type="button">Remove Song</button>-->
+  <hr>
+  <br>
+  <br>
+  <button class="submitgbtn" type="submit">Submit album</button>
+</form>

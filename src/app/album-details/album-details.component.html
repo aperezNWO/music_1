@@ -1,0 +1,19 @@
+<div class="album-body"></div>
+<h2>{{this.albumDetails?.artist}}</h2>
+<div class="album-card">
+    <span class="album-images">
+        <img src="{{this.albumDetails?.imageUrl}}" alt="album" >
+    </span>
+    <br>
+    <p>Release Date:</p>
+    <ul *ngFor="let date of this.albumDetails?.date">
+        <li>{{date}}</li>
+    </ul>
+    <span *ngIf="this.albumDetails?.songs">
+        <p>Song Count:</p>
+        <ul *ngFor="let song of this.albumDetails?.songs">
+            <li>Title : {{song.title}} - Duration : {{song.duration}}S</li>
+        </ul>
+        <a routerLink="/albumcard">back to albums</a>
+    </span>
+</div>

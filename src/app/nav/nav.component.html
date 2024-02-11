@@ -1,0 +1,9 @@
+<ul>
+<span
+    class="container" *ngFor="let page of pages">
+    <li><a routerLink="/{{page.url}}">{{page.text}}</a></li>
+    
+</span>
+</ul>
+<router-outlet></router-outlet>
+

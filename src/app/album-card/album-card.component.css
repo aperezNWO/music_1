@@ -1,0 +1,28 @@
+
+h1{
+    color: blue;
+    text-align: center;
+    font-size: 50px;
+}
+.album-card {
+    display: inline-block;
+   background-color: plum;
+    width: 750px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 1em;
+    font-size: 25px;
+    margin:2px;
+  }
+  
+  
+  .album-body {
+    padding: 15px;
+  }
+  
+  
+  ul {
+    margin-bottom:0px;
+  }
+  
+  

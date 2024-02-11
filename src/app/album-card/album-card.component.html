@@ -1,0 +1,8 @@
+<h1>Arlyn's Album</h1>
+<span
+    class="album-card" *ngFor="let album of albums">
+    <a routerLink="/albumdetails/{{album.id}}">{{album.artist}}<br>
+         <img src="{{album.imageUrl}}" alt="{{album.artist}}" >
+    </a>
+    <br>
+</span>
