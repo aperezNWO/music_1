@@ -9,6 +9,9 @@ import { Album } from '../album.module';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
+addSong() {
+throw new Error('Method not implemented.');
+}
   albumForm!: FormGroup
   albums: any;
   loading: any;
