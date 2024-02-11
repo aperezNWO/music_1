@@ -2,17 +2,18 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AlbumsService } from '../albums.service';
 import { Album, ISong } from '../album.module';
-
+//
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
+//
 export class AdminComponent {
   //
   albumForm! : FormGroup
-  //albums     : any;
-  //loading    : any;
+  //
+  status       : string = '';
   //musicAlbum : any;
   songArray    : ISong[] = [];
   //
@@ -35,6 +36,30 @@ export class AdminComponent {
     });
   //
   }
+  //
+  addSong() {
+    //
+    console.log("Adding song...");
+    //
+    let p_songName       : string  = this.albumForm.value["songName"]       || "";
+    let p_songDuration   : number  = this.albumForm.value["songDuration"]   || "";  
+    //
+    let song : ISong = {
+      title   : p_songName,
+      duration: p_songDuration
+    } 
+    //
+    this.songArray.push(song);
+  }
+  //
+  removeSong(songName: string) {
+    // Remove the element with value "songName"
+    let indexToRemove = this.songArray.findIndex(x => x.title === songName);
+    if (indexToRemove !== -1) {
+      this.songArray.splice(indexToRemove, 1); 
+    }
+  }
+  //
   onSubmit() {
     //
     console.log('form entry')
@@ -59,20 +84,7 @@ export class AdminComponent {
     };
     //
     this.albumService.addAlbum(albumItem);
-  }
-  //
-  addSong() {
     //
-    console.log("Adding song...");
-    //
-    let p_songName       : string  = this.albumForm.value["songName"]       || "";
-    let p_songDuration   : number  = this.albumForm.value["songDuration"]   || "";  
-    //
-    let song : ISong = {
-      title   : p_songName,
-      duration: p_songDuration
-    } 
-    //
-    this.songArray.push(song);
+    this.status = '[se agrego correctamente el album]';
   }
 }

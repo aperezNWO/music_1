@@ -2,9 +2,9 @@ div {
     margin-left:40%;
     color: blue;
     font-weight: bold;
-    padding: 15px;
+    padding: 5px;
     margin: 20px;
-    font-size: 30px;
+    font-size: 15px;
   
  }
  .btn{
@@ -24,9 +24,9 @@ div {
  }
 
  label{
-  margin: 10px;
+  margin: 5px;
  }
  h5 {
-    font-size: 40px;
+    font-size: x-large;
     color: blue;
 }
