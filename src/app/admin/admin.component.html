@@ -20,16 +20,23 @@
   <h2>Songs</h2>
   <div>
     <label>Song</label>
-    <input type="text" placeholder="">
+    <input type="text" placeholder="" formControlName="songName">
   </div>
   <div>
     <label>Duration</label>
-    <input type="text" placeholder="">
+    <input type="text" placeholder="" formControlName="songDuration">
   </div>
-  <button class="addsongbtn" type="button" (onclick)="this.addSong();">Add song</button>
-  <!--<button class="removegbtn" type="button">Remove Song</button>-->
+  <input class="addsongbtn" type="button" (click)="this.addSong()" value="Add song">
+  <div>
+      <p>Song Count:</p>
+      <ul *ngFor="let _song of this.songArray">
+          <li>Title : {{_song.title}} - Duration : {{_song.duration}}S</li>
+      </ul>
+  </div>
   <hr>
   <br>
   <br>
   <button class="submitgbtn" type="submit">Submit album</button>
 </form>
+<hr>
+<a routerLink="/albumcard">back to albums</a>
